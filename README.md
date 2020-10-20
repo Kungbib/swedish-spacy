@@ -6,7 +6,7 @@ The models include a part-of-speech tagger, dependency parser and named entity r
 
 ## Training data and performance
 
-We trained two separate tagger models for UPOS and XPOS, but the parser and NER are the same for both models.  
+We trained two separate tagger models for UPOS and XPOS, but the parser and NER are the same for both models. The models are initialized with [FastText](https://fasttext.cc/docs/en/crawl-vectors.html) word embeddings.
 
 ### UPOS tagger
 
