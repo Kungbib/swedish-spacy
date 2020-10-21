@@ -19,7 +19,7 @@ Evaluation result on the joint Talbanken and LinES test sets: **96.37**
 
 Since the Talbanken and LinES treebanks are annotated with different XPOS tagsets we could not use them to train the XPOS model. Instead we used Talbanken and the Stockholm-Umeå Corpus v3.0 ([SUC 3.0](https://spraakbanken.gu.se/en/resources/suc3)), which is a balanced corpus containing different types of news text, as well as fictional and non-fictional prose.  
 
-Evaluation result on the Talbanken test set plus an held-out portion of SUC 3.0: **96.84**
+Evaluation result on the Talbanken test set plus a held-out portion of SUC 3.0: **96.84**
 
 ### Dependency parser
 
@@ -33,7 +33,7 @@ Labelled Attachment Score (LAS) **82.20**
 
 Named Entity Recognition was trained on the Stockholm Umeå Corpus v3.0 (SUC 3.0). Unlike pos tags, entities in SUC 3.0 were not annotated by human annotators, but automatically generated using [Sparv](https://spraakbanken.gu.se/en/tools/sparv/annotations). This means that they cannot be considered a gold standard.
 
-Evaluation results on an held-out portion of SUC 3.0:  
+Evaluation results on a held-out portion of SUC 3.0:  
 Precision **86.27**  
 Recall **84.48**  
 F score **85.37**
