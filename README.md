@@ -23,7 +23,7 @@ $ pip install sv_pipeline-0.0.0.tar.gz
 >>> import spacy
 >>> nlp = spacy.load("sv_pipeline")
 ```
-
+N.B. Make sure to install the `spacy-transformers` extension, or the models won't work.
 
 ## Training data and performance
 
