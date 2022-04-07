@@ -21,7 +21,7 @@ The models can be installed and loaded into spaCy as follows:
 $ pip install sv_pipeline-0.0.0.tar.gz
 
 >>> import spacy
->>> nlp = spacy.load("sv_pipeline")
+>>> nlp = spacy.load("sv-pipeline")
 ```
 N.B. Make sure to install the `spacy-transformers` extension, or the models won't work.
 
@@ -62,18 +62,18 @@ F score **85.37**
 
 ## Usage
 
-To download the models you can go to https://data.kb.se/datasets/2020/10/swedish_nlp/spacy/ and start the download manually. If you are running Ubuntu you can also use these commands:
+Make sure that you have `git` and `git-lfs` installed on your system. To download the models you can go to https://git.kb.se/kblabb/static and use the following commands to only get the files that you are interested in:
 
 ```
-wget https://data.kb.se/datasets/2020/10/swedish_nlp/spacy/sv_model_upos.zip
-wget https://data.kb.se/datasets/2020/10/swedish_nlp/spacy/sv_model_xpos.zip
+$ GIT_LFS_SKIP_SMUDGE=1 git clone https://git.kb.se/kblabb/static
+$ cd static
+$ git lfs pull --include your_file.zip
 ```
-
-Once the models are downloaded and unzipped, they can be loaded into python with `spacy.load()`. Note that the path should point to the inner folder that contains the tagger, parser and ner folders.
+In order to load the models into spaCy and use them you can look at the snippet below, or go to the spaCy official homepage for much more in-depth information. 
 
 ```python
 import spacy
-nlp = spacy.load("path/to/model/inner/folder")
+nlp = spacy.load("model_name")
 doc = nlp("Jag gillar London och Berlin.")
 width = 15
 for token in doc:
